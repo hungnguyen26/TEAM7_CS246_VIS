@@ -16,7 +16,9 @@ public class ThucHanh1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+       
         FormChinh frm = new FormChinh();
+        frm.setLocationRelativeTo(null);  // đưa form ra giữa màn hình
         frm.setVisible(true);
     }
     
