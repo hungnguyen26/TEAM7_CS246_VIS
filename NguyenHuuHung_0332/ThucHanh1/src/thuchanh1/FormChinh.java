@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  * @author 
  */
 public class FormChinh extends javax.swing.JFrame {
-
+   
     /**
      * Creates new form FormChinh
      */
@@ -151,9 +151,11 @@ public class FormChinh extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        // TODO add your handling code here:
-        FormCong frm = new FormCong();
-        frm.setVisible(true);
+            
+
+// TODO add your handling code here:
+        FormCong form = new FormCong();
+        form.setVisible(true);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
