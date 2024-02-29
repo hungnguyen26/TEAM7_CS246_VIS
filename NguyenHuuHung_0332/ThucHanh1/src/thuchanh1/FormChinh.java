@@ -170,6 +170,7 @@ public class FormChinh extends javax.swing.JFrame {
 
 // TODO add your handling code here:
         FormCong form = new FormCong();
+        form.setLocationRelativeTo(null);    // đưa form ra giữa mh
         form.setVisible(true);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
@@ -177,6 +178,7 @@ public class FormChinh extends javax.swing.JFrame {
         // TODO add your handling code here:
 //        JOptionPane.showMessageDialog(null, "Chức năng này chưa thực hiện được", "THÔNG BÁO", 1);
         FormTru form = new FormTru();
+        form.setLocationRelativeTo(null);    // đưa form ra giữa mh
         form.setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
@@ -184,12 +186,16 @@ public class FormChinh extends javax.swing.JFrame {
         // TODO add your handling code here:
 //        JOptionPane.showMessageDialog(null, "Chức năng này chưa thực hiện được", "THÔNG BÁO", 1);
         FormNhan form = new FormNhan();
+        form.setLocationRelativeTo(null);    // đưa form ra giữa mh
         form.setVisible(true);
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "Chức năng này chưa thực hiện được", "THÔNG BÁO", 1);
+//        JOptionPane.showMessageDialog(null, "Chức năng này chưa thực hiện được", "THÔNG BÁO", 1);
+        FormChia frm = new FormChia();
+        frm.setLocationRelativeTo(null);    // đưa form ra giữa mh
+        frm.setVisible(true);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenu12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu12MouseClicked

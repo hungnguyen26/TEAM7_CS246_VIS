@@ -9,7 +9,7 @@ import java.awt.Color;
 
 /**
  *
- * @author 
+ * @author
  */
 public class FormCong extends javax.swing.JFrame {
 
@@ -30,6 +30,7 @@ public class FormCong extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtSo1 = new javax.swing.JTextField();
@@ -47,11 +48,33 @@ public class FormCong extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Total");
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel2.setText("Number 1 :");
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setText("Số thứ 1 : ");
+        jLabel2.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jLabel2AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
-        jLabel3.setText("Number 2 :");
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setText("Số thứ 2 :");
 
         txtSo1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,6 +88,9 @@ public class FormCong extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(153, 153, 153));
+        jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/add.png"))); // NOI18N
         jButton1.setText("Tính tổng");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,11 +98,11 @@ public class FormCong extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(204, 204, 204));
+        jButton2.setBackground(new java.awt.Color(153, 153, 153));
         jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/delete.png"))); // NOI18N
-        jButton2.setText("Delete");
-        jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton2.setText("Xóa");
+        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton2.setBorderPainted(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,7 +110,8 @@ public class FormCong extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("Number 3 :");
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel4.setText("Số thứ 3 :");
 
         txtSo3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,51 +127,54 @@ public class FormCong extends javax.swing.JFrame {
 
         jLabel5.setText("Số thứ ba");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        jLabel6.setText("Result :");
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel6.setText("Kết quả :");
         jLabel6.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel8.setText("Total");
+        jLabel8.setText("Tính tổng");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(31, 31, 31)
+                .addComponent(lblKQ)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(lblKQ))
+                        .addGap(20, 20, 20)
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(20, 20, 20)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel3)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(jLabel4)))
+                            .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtSo2)
-                                    .addComponent(txtSo1)
-                                    .addComponent(txtSo3)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addGap(36, 36, 36))
+                                .addComponent(jLabel6)))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtSo2, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)
+                                .addComponent(txtSo3)
+                                .addComponent(txtSo1))
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(29, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel8)
-                .addGap(157, 157, 157))
+                .addGap(140, 140, 140))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(61, 61, 61)
                     .addComponent(jLabel5)
-                    .addContainerGap(281, Short.MAX_VALUE)))
+                    .addContainerGap(305, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,18 +199,18 @@ public class FormCong extends javax.swing.JFrame {
                         .addComponent(lblKQ)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(32, 32, 32)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(13, 13, 13))))
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(55, 55, 55)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(28, 28, 28))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(238, Short.MAX_VALUE)
+                    .addContainerGap(272, Short.MAX_VALUE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(119, 119, 119)))
         );
@@ -190,25 +220,25 @@ public class FormCong extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-       try {
-        double so1 = Double.parseDouble(txtSo1.getText());
-        double so2 = Double.parseDouble(txtSo2.getText());         
-        double so3 = Double.parseDouble(txtSo3.getText());
+        try {
+            double so1 = Double.parseDouble(txtSo1.getText());
+            double so2 = Double.parseDouble(txtSo2.getText());
+            double so3 = Double.parseDouble(txtSo3.getText());
 
-        lblKQ.setForeground(Color.BLACK);
-        double tong = so1 + so2 + so3;
-        jTextField1.setText(Double.toString(tong));
-    } catch(NumberFormatException e) {
-        jTextField1.setText("Nhập dữ liệu sai");
-    }
-        
+            lblKQ.setForeground(Color.BLACK);
+            double tong = so1 + so2 + so3;
+             jTextField1.setText(so1+" + "+ so2+" + "+so3+" = "+Double.toString(tong));
+        } catch (NumberFormatException e) {
+            jTextField1.setText("Nhập dữ liệu sai");
+        }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         lblKQ.setForeground(Color.BLACK);
         txtSo1.setText("");
-        txtSo2.setText("");        
+        txtSo2.setText("");
         txtSo3.setText("");
         jTextField1.setText("");
         lblKQ.setText("");
@@ -219,7 +249,7 @@ public class FormCong extends javax.swing.JFrame {
     }//GEN-LAST:event_txtSo1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-                // TODO add your handling code here:
+        // TODO add your handling code here:
 
     }//GEN-LAST:event_jTextField1ActionPerformed
 
@@ -230,6 +260,10 @@ public class FormCong extends javax.swing.JFrame {
     private void txtSo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSo3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSo3ActionPerformed
+
+    private void jLabel2AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jLabel2AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel2AncestorAdded
 
     /**
      * @param args the command line arguments
@@ -276,6 +310,7 @@ public class FormCong extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblKQ;
     private javax.swing.JTextField txtSo1;
