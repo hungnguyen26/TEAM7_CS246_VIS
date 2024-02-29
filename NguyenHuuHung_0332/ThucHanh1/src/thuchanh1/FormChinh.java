@@ -89,8 +89,18 @@ public class FormChinh extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jMenu3.setText("Hệ thống");
+        jMenu3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu3ActionPerformed(evt);
+            }
+        });
 
         jMenuItem2.setText("Thoát");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem2);
 
         jMenuBar1.add(jMenu3);
@@ -132,6 +142,11 @@ public class FormChinh extends javax.swing.JFrame {
         jMenuBar1.add(jMenu11);
 
         jMenu12.setText("Trợ giúp");
+        jMenu12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu12MouseClicked(evt);
+            }
+        });
         jMenuBar1.add(jMenu12);
 
         setJMenuBar(jMenuBar1);
@@ -160,18 +175,38 @@ public class FormChinh extends javax.swing.JFrame {
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "Chức năng này chưa thực hiện được", "THÔNG BÁO", 1);
+//        JOptionPane.showMessageDialog(null, "Chức năng này chưa thực hiện được", "THÔNG BÁO", 1);
+        FormTru form = new FormTru();
+        form.setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "Chức năng này chưa thực hiện được", "THÔNG BÁO", 1);
+//        JOptionPane.showMessageDialog(null, "Chức năng này chưa thực hiện được", "THÔNG BÁO", 1);
+        FormNhan form = new FormNhan();
+        form.setVisible(true);
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(null, "Chức năng này chưa thực hiện được", "THÔNG BÁO", 1);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenu12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu12MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu12MouseClicked
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        int option = JOptionPane.showConfirmDialog(this, "Bạn có muốn thoát chương trình không?", "Xác nhận thoát", JOptionPane.YES_NO_OPTION);
+        if (option == JOptionPane.YES_OPTION) {
+        System.exit(0);
+    }
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu3ActionPerformed
 
     /**
      * @param args the command line arguments
