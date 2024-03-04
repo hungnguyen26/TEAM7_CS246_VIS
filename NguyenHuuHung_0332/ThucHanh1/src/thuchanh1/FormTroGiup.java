@@ -32,8 +32,9 @@ public class FormTroGiup extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("Chào mừng bạn đến với máy tính của Hưng!\n\nHướng dẫn sử dụng:\n- Chọn chức năng phép tính bạn muốn sử dụng từ menu Chức năng.\n- Nhập các số bạn muốn tính toán vào các ô nhập liệu.\n- Nhấn nút \"Tính toán\" để xem kết quả.\n\nVí dụ:\n- Nếu bạn muốn thực hiện phép cộng, chọn \"Phép cộng\" từ menu \nChức năng, sau đó nhập các số bạn muốn cộng và nhấn \"Tính toán\".\n\n* Ghi chú: Ứng dụng chỉ hỗ trợ các phép tính cơ bản (cộng, trừ, nhân, chia).\n\nNếu bạn cần hỗ trợ thêm, vui lòng liên hệ với chúng tôi tại nguyenhuuhung2610@gmail.com\n\nChúc bạn có trải nghiệm tính toán vui vẻ cùng ứng dụng của Hưng!");
+        jTextArea1.setText("Chào mừng bạn đến với máy tính của Hưng!\n\nHướng dẫn sử dụng:\n- Chọn chức năng phép tính bạn muốn sử dụng từ menu Chức năng.\n- Nhập các số bạn muốn tính toán vào các ô nhập liệu.\n- Nhấn nút \"Tính...\" để xem kết quả.\n\nVí dụ:\n- Nếu bạn muốn thực hiện phép cộng, chọn \"Phép cộng\" từ menu Chức năng, \nsau đó nhập các số bạn muốn cộng và nhấn \"Tính cộng\".\n\n* Ghi chú: Ứng dụng chỉ hỗ trợ các phép tính cơ bản (cộng, trừ, nhân, chia).\n\nNếu bạn cần hỗ trợ thêm, vui lòng liên hệ với chúng tôi tại nguyenhuuhung2610@gmail.com\n\nChúc bạn có trải nghiệm tính toán vui vẻ cùng ứng dụng của Hưng!");
         jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
