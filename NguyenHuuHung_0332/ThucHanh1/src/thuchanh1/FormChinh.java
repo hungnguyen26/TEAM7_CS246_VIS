@@ -46,6 +46,8 @@ public class FormChinh extends javax.swing.JFrame {
         jMenuBar5 = new javax.swing.JMenuBar();
         jMenu9 = new javax.swing.JMenu();
         jMenu10 = new javax.swing.JMenu();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -88,6 +90,14 @@ public class FormChinh extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calculator.png"))); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("Bahnschrift", 1, 24)); // NOI18N
+        jLabel2.setText("Máy Tính Của Hưng");
+
+        jMenuBar1.setBackground(new java.awt.Color(204, 255, 204));
+        jMenuBar1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+
         jMenu3.setText("Hệ thống");
         jMenu3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,6 +105,7 @@ public class FormChinh extends javax.swing.JFrame {
             }
         });
 
+        jMenuItem2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jMenuItem2.setText("Thoát");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,7 +117,18 @@ public class FormChinh extends javax.swing.JFrame {
         jMenuBar1.add(jMenu3);
 
         jMenu11.setText("Chức năng");
+        jMenu11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu11MouseClicked(evt);
+            }
+        });
+        jMenu11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu11ActionPerformed(evt);
+            }
+        });
 
+        jMenuItem5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jMenuItem5.setText("Phép cộng");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,6 +137,7 @@ public class FormChinh extends javax.swing.JFrame {
         });
         jMenu11.add(jMenuItem5);
 
+        jMenuItem6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jMenuItem6.setText("Phép trừ");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,6 +146,7 @@ public class FormChinh extends javax.swing.JFrame {
         });
         jMenu11.add(jMenuItem6);
 
+        jMenuItem7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jMenuItem7.setText("Phép nhân");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,6 +155,7 @@ public class FormChinh extends javax.swing.JFrame {
         });
         jMenu11.add(jMenuItem7);
 
+        jMenuItem8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jMenuItem8.setText("Phép chia");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -155,11 +180,23 @@ public class FormChinh extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(143, 143, 143)
+                .addComponent(jLabel2)
+                .addContainerGap(155, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -200,6 +237,9 @@ public class FormChinh extends javax.swing.JFrame {
 
     private void jMenu12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu12MouseClicked
         // TODO add your handling code here:
+        FormTroGiup formTroGiup = new FormTroGiup();
+        formTroGiup.setLocationRelativeTo(this); // Hiển thị form ở giữa form chính
+        formTroGiup.setVisible(true);
     }//GEN-LAST:event_jMenu12MouseClicked
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
@@ -213,6 +253,14 @@ public class FormChinh extends javax.swing.JFrame {
     private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenu3ActionPerformed
+
+    private void jMenu11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu11ActionPerformed
+
+    private void jMenu11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu11MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu11MouseClicked
 
     /**
      * @param args the command line arguments
@@ -245,12 +293,16 @@ public class FormChinh extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                
-                new FormChinh().setVisible(true);
+                 FormChinh form = new FormChinh();
+                form.setLocationRelativeTo(null);
+                form.setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
