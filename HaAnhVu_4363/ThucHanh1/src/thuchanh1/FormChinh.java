@@ -46,6 +46,7 @@ public class FormChinh extends javax.swing.JFrame {
         jMenuBar5 = new javax.swing.JMenuBar();
         jMenu9 = new javax.swing.JMenu();
         jMenu10 = new javax.swing.JMenu();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -55,6 +56,7 @@ public class FormChinh extends javax.swing.JFrame {
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenu12 = new javax.swing.JMenu();
+        jMenuItem10 = new javax.swing.JMenuItem();
 
         jMenu1.setText("jMenu1");
 
@@ -87,10 +89,19 @@ public class FormChinh extends javax.swing.JFrame {
         jMenuBar5.add(jMenu10);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(700, 300));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/thuchanh1/1-68.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
 
         jMenu3.setText("Hệ thống");
 
         jMenuItem2.setText("Thoát");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem2);
 
         jMenuBar1.add(jMenu3);
@@ -132,6 +143,20 @@ public class FormChinh extends javax.swing.JFrame {
         jMenuBar1.add(jMenu11);
 
         jMenu12.setText("Trợ giúp");
+        jMenu12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu12ActionPerformed(evt);
+            }
+        });
+
+        jMenuItem10.setText("Design by");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
+        jMenu12.add(jMenuItem10);
+
         jMenuBar1.add(jMenu12);
 
         setJMenuBar(jMenuBar1);
@@ -140,11 +165,11 @@ public class FormChinh extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 512, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 278, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 410, Short.MAX_VALUE)
         );
 
         pack();
@@ -157,19 +182,36 @@ public class FormChinh extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "Chức năng này chưa thực hiện được", "THÔNG BÁO", 1);
+        FormTru frm = new FormTru();
+        frm.setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "Chức năng này chưa thực hiện được", "THÔNG BÁO", 1);
+        FormNhan frm = new FormNhan();
+        frm.setVisible(true);
+        
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "Chức năng này chưa thực hiện được", "THÔNG BÁO", 1);
+        FormChia frm = new FormChia();
+        frm.setVisible(true);
+        
     }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        int option = JOptionPane.showConfirmDialog(this, "Bạn có muốn thoát khỏi hệ thống không?", "Xác nhận", JOptionPane.OK_CANCEL_OPTION);
+    if (option == JOptionPane.OK_OPTION) {
+        System.exit(0);
+    }
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenu12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu12ActionPerformed
+
+    }//GEN-LAST:event_jMenu12ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        JOptionPane.showMessageDialog(this, "Đây là phần mềm được phát triển bởi: Dev-Hà Anh Vũ", "Thông tin nhà phát triển", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -207,6 +249,7 @@ public class FormChinh extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
@@ -224,6 +267,7 @@ public class FormChinh extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar3;
     private javax.swing.JMenuBar jMenuBar4;
     private javax.swing.JMenuBar jMenuBar5;
+    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
