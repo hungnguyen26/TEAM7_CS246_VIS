@@ -4,7 +4,6 @@
  */
 package customermanagement;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
@@ -22,7 +21,7 @@ public class JFCustomermanagement extends javax.swing.JFrame {
     Customermanagement x;
     private static int pos = 0;
     private static int check = 0;
-    
+
     public JFCustomermanagement() {
         initComponents();
         list.add(new Customermanagement("111", "Ha Anh Vu", "05112231", "6/4/2024", "6/4/2004", "Quang Nam"));
@@ -30,7 +29,8 @@ public class JFCustomermanagement extends javax.swing.JFrame {
         View();
         ViewTable();
     }
-    public void View(){
+
+    public void View() {
         x = list.get(pos);
         this.txtID.setText(x.getiD());
         this.txtName.setText(x.getName());
@@ -40,21 +40,24 @@ public class JFCustomermanagement extends javax.swing.JFrame {
         this.txtAddress.setText(x.getAddress());
         OnOff(true, false);
     }
-    public void ViewTable(){
+
+    public void ViewTable() {
         DefaultTableModel model = (DefaultTableModel) this.tblCustomermanagement.getModel();
         model.setNumRows(0);
         int n = 1;
-        for(Customermanagement x : list){
-            model.addRow(new Object[]{n++,x.getiD(),x.getName(),x.getPhoneNO(),x.getPurchasedDate(),x.getDateOfBirth(),x.getAddress()});
+        for (Customermanagement x : list) {
+            model.addRow(new Object[]{n++, x.getiD(), x.getName(), x.getPhoneNO(), x.getPurchasedDate(), x.getDateOfBirth(), x.getAddress()});
         }
     }
-    public void OnOff(boolean a, boolean b){
+
+    public void OnOff(boolean a, boolean b) {
         this.btnSave.show(b);
         this.btnCancel.show(b);
         this.btnAdd.show(a);
         this.btnEdit.show(a);
         this.btnDelete.show(a);
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -155,32 +158,32 @@ public class JFCustomermanagement extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtPurchasedDate))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(78, 78, 78)
+                                .addComponent(txtName))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                                .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtAddress))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtID))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtPhoneNo)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtdateOfBirth)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtdateOfBirth)
+                            .addComponent(txtPurchasedDate)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addGap(68, 68, 68)
+                        .addComponent(txtAddress))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtPhoneNo)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(63, 63, 63)
@@ -206,11 +209,14 @@ public class JFCustomermanagement extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(txtID)
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE))
-                        .addGap(15, 15, 15)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                            .addComponent(txtName))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtName)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -327,7 +333,7 @@ public class JFCustomermanagement extends javax.swing.JFrame {
         this.txtdateOfBirth.setText("");
         this.txtAddress.setText("");
         OnOff(false, true);
-        check =1;
+        check = 1;
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
@@ -340,10 +346,10 @@ public class JFCustomermanagement extends javax.swing.JFrame {
         String address = this.txtAddress.getText();
         if (check == 1) {
             list.add(new Customermanagement(id, name, phoneNO, purchasedDate, dateOfBirth, address));
-            
+
         }
-        if(check == -1){
-            list.set(pos,new Customermanagement(id, name, phoneNO, purchasedDate, dateOfBirth, address));
+        if (check == -1) {
+            list.set(pos, new Customermanagement(id, name, phoneNO, purchasedDate, dateOfBirth, address));
         }
         View();
         ViewTable();
@@ -353,7 +359,7 @@ public class JFCustomermanagement extends javax.swing.JFrame {
         // TODO add your handling code here:
         OnOff(false, true);
         check = -1;
-        
+
     }//GEN-LAST:event_btnEditActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
@@ -398,7 +404,9 @@ public class JFCustomermanagement extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFCustomermanagement().setVisible(true);
+                JFCustomermanagement frame = new JFCustomermanagement();
+                frame.setLocationRelativeTo(null); // Center the JFrame on the screen
+                frame.setVisible(true);
             }
         });
     }
