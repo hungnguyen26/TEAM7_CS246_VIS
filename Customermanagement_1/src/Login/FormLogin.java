@@ -42,6 +42,7 @@ public class FormLogin extends javax.swing.JFrame {
         CreateAccount = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("ĐĂNG NHẬP QUẢN LÝ KHÁCH HÀNG");
@@ -140,8 +141,13 @@ public class FormLogin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(login)
+<<<<<<< HEAD
                     .addComponent(CreateAccount))
                 .addContainerGap(38, Short.MAX_VALUE))
+=======
+                    .addComponent(cancel))
+                .addContainerGap(99, Short.MAX_VALUE))
+>>>>>>> f77da84a1317be0314f74d8ad2a03f2552cc93b8
         );
 
         pack();
